@@ -1,0 +1,106 @@
+/* General App Reset */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.dashboard-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Header/Alerts Panel */
+.header-panel {
+  background-color: #0a361c; /* Dark Green */
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.alert-count {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.p1-counter {
+  color: #ff4d4d; /* Bright Red */
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+/* Main Content Area */
+.main-content {
+  flex-grow: 1;
+  display: flex;
+}
+
+/* Incident Feed (Left Panel) */
+.feed-panel {
+  width: 300px;
+  padding: 20px;
+  background-color: #ffffff;
+  overflow-y: auto;
+  border-right: 1px solid #ddd;
+}
+
+.incident-card {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  border-left: 5px solid; /* Color driven by JS */
+}
+.incident-card:hover {
+  background-color: #eee;
+}
+
+/* Map Container (Center Area) */
+.map-container {
+  flex-grow: 1;
+  position: relative;
+}
+
+/* Detail/Action Panel (Optional Right Panel) */
+.detail-panel {
+  width: 350px;
+  padding: 20px;
+  background-color: #fff;
+  border-left: 1px solid #ddd;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.05);
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+
+.action-buttons button {
+  padding: 10px 15px;
+  margin-right: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.btn-assign {
+  background-color: #ff9800; /* Orange */
+  color: white;
+}
+.btn-resolve {
+  background-color: #4caf50; /* Green */
+  color: white;
+}
+
+/* Map specific styling (to make it fill the container) */
+.leaflet-container {
+  height: 100%;
+}
