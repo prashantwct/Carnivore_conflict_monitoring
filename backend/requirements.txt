@@ -1,0 +1,9 @@
+# Python packages required for the monolithic Flask backend (app.py)
+Flask
+Flask-SQLAlchemy
+psycopg2-binary   # PostgreSQL database driver
+python-dotenv     # To load the .env file
+Flask-CORS        # For cross-origin requests from the web dashboard
+PyJWT             # For potential future security/token generation
+werkzeug          # For password hashing (generate_password_hash)
+GeoAlchemy2       # CRITICAL for PostGIS geospatial features
