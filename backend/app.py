@@ -15,7 +15,9 @@ db = SQLAlchemy()
 # -----------------------------
 # App Factory
 # -----------------------------
-def create_app():
+def create_app(database_url = os.getenv("DATABASE_URL")
+print("DEBUG DATABASE_URL =", database_url)
+):
     app = Flask(__name__)
 
     # -----------------------------
